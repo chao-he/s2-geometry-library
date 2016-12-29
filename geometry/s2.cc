@@ -19,11 +19,8 @@ COMPILE_ASSERT(S2::kSwapMask == 0x01 && S2::kInvertMask == 0x02,
                masks_changed);
 
 static const uint32 MIX32 = 0x12b9b0a1UL;
-#if defined __GNUC__ || defined __APPLE__
-#include <ext/hash_set>
-#else
-#include <hash_set>
-#endif
+
+#include "geometry/s2/hash_map_backward.h"
 
 namespace __gnu_cxx {
 
